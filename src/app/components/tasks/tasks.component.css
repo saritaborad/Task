@@ -1,0 +1,14 @@
+.alert{
+    color: #155724;
+    background-color:#d4edda;
+
+}
+
+div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}

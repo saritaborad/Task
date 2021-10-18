@@ -1,0 +1,18 @@
+<div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+               <h3 *ngIf="alert">Task is Deleted Successfully.</h3>
+  <fa-icon (click)="closeDelete()" 
+        [ngStyle]= "{'color':'#155724'}" 
+        [icon]="faTimes"></fa-icon>
+</div> 
+
+<div *ngIf="addedAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <h3 *ngIf="addedAlert">Task is Added Successfully.</h3>
+<fa-icon (click)="closeDelete()" 
+[ngStyle]= "{'color':'#155724'}" 
+[icon]="faTimes"></fa-icon>
+</div> 
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+
+<app-task-item (onDeleteTask)="deleteTask(task)" 
+(onToggleReminder)="toggleReminder(task)"
+  *ngFor="let task of tasks" [task]="task"></app-task-item>
